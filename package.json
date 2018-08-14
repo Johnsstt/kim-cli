@@ -1,9 +1,10 @@
 {
-  "name": "kimi-cli",
+  "name": "kimi",
   "version": "1.0.0",
-  "author": "sLei",
+  "author": "Johnsstt",
   "license": "MIT",
   "description": "Quickly generate the project's front-end tools",
+  "mail": "Johnsstt <john_tech@163.com>",
   "main": "./bin/kimi",
   "dependencies": {
     "_ansi-styles@3.2.1@ansi-styles": "^3.2.1",
