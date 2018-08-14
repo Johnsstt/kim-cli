@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+'use strict';
+
+const program = require('commander');
+const join = require('path').join;
+const chalk = require('chalk');
+const exists = require('fs').existsSync;
+const readFileSync = require('fs').readFileSync;
+const spawn = require('win-spawn');
+
+
+
+program
+  .usage('<command> [options]')
+  .on('--help', printHelp)
+  .parse(process.argv);
+
+const args = program.args[0];
+const argv = process.argv.slice(3);
+
+
+if(!args) {  
+  program.help();
+} else {
+  const bin = executable(args);
+  if(bin) {
+    exeCls(spawn(bin, argv, {stdio: 'inherit', customFds: [0, 1, 2]}));
+  } else {
+    program.help();
+  }
+}
+
+function exeCls(spw) {
+  spw.on('close', function(code) {
+    process.exit(code);
+  })
+}
+
+
+function printHelp() {
+  console.log('  Commands:');
+  console.log();
+  console.log('    init           Init a new kimi application in the current folder');  
+  console.log();
+  console.log('  All commands can be run with -h (or --help) for more information.')
+}
+
+function executable(args) {
+  var file = join(__dirname, 'kimi-' + args);
+  if(exists(file)) {
+    return file;
+  }
+}

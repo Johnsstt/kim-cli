@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+
+const program = require('commander');
+const chalk = require('chalk');
+
+
+console.log(chalk.gray('进入kimi-init页面了'));
+
+program
+  .usage('<command> [options]')
+  .parse(process.argv);
+
+require('../lib/init')(program);
+
+
+
