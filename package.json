@@ -5,7 +5,9 @@
   "license": "MIT",
   "description": "Quickly generate the project's front-end tools",
   "mail": "Johnsstt <john_tech@163.com>",
-  "main": "./bin/kimi",
+  "bin": {
+    "kimi": "./bin/kimi"
+  },
   "dependencies": {
     "chalk": "^2.4.1",    
     "commander": "^2.17.1",
