@@ -16,10 +16,11 @@ program
   .parse(process.argv);
 
 if(!program.args[0]) {
+  console.log('操作有误');
   program.help();
 }else{
   const dest = join(process.cwd(), program.args[0]);
-  console.log(dest);
+  console.log('dest地址是', dest)
   if(existsSync(dest)) {
     console.error(error('Existing directory here, please run new command for an empty folder!'));
     process.exit(1);
