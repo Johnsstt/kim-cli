@@ -3,6 +3,10 @@
 
 const program = require('commander');
 const chalk = require('chalk');
+const existsSync = require('fs').existsSync;
+const mkdirpSync = require('fs-extra').mkdirpSync;
+const join = require('path').join;
+const error = chalk.red;
 
 
 console.log(chalk.gray('进入kim-init页面了'));
@@ -11,7 +15,21 @@ program
   .usage('<command> [options]')
   .parse(process.argv);
 
-require('../lib/init')(program);
+if(!program.args[0]) {
+  program.help();
+}else{
+  const dest = join(process.cwd(), program.args[0]);
+  console.log(dest);
+  if(existsSync(dest)) {
+    console.error(error('Existing directory here, please run new command for an empty folder!'));
+    process.exit(1);
+  }
+  mkdirpSync(dest);
+  process.chdir(dest);
+  require('../lib/init')(program);
+
+}
+
 
 
 
