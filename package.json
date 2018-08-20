@@ -1,6 +1,6 @@
 {
   "name": "kim-cli",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "johnsl",
   "description": "Quickly generate the project's front-end tools",
   "mail": "john_app@163.com",
