@@ -1,5 +1,5 @@
 ### install
-$ npm install kimi-cli -g
+$ npm install kim-cli -g
 
 ### create folder
 $ mkdir myapp
@@ -8,7 +8,7 @@ $ mkdir myapp
 $ cd myapp
 
 ### create app
-$ kimi init
+$ kim init
 
 ### start app
 $ cd myapp
