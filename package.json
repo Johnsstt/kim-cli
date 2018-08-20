@@ -1,10 +1,9 @@
 {
-  "name": "kimi-cli",
-  "version": "0.0.2",
-  "author": "Johnsstt",
-  "license": "MIT",
+  "name": "kim-cli",
+  "version": "0.0.4",
+  "author": "johnsl",
   "description": "Quickly generate the project's front-end tools",
-  "mail": "Johnsstt <john_tech@163.com>",
+  "mail": "john_app@163.com",
   "bin": {
     "kimi": "./bin/kimi"
   },

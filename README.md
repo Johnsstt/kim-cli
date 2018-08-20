@@ -1,16 +1,16 @@
-# install
+### install
 $ npm install kimi-cli -g
 
-#create folder
+### create folder
 $ mkdir myapp
 
-#go to folder
+### go to folder
 $ cd myapp
 
-#create app
+### create app
 $ kimi init
 
-#start app
+### start app
 $ cd myapp
 $ npm start
 
