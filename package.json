@@ -15,7 +15,8 @@
     "supports-color": "^5.4.0",
     "through2": "^2.0.3",
     "vinyl-fs": "^3.0.3",
-    "win-spawn": "^2.0.0"
+    "win-spawn": "^2.0.0",
+    "fs-extra": "^7.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
