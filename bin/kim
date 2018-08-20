@@ -40,13 +40,13 @@ function exeCls(spw) {
 function printHelp() {
   console.log('  Commands:');
   console.log();
-  console.log('    init           Init a new kimi application in the current folder');  
+  console.log('    init           Init a new kim application in the current folder');  
   console.log();
   console.log('  All commands can be run with -h (or --help) for more information.')
 }
 
 function executable(args) {
-  var file = join(__dirname, 'kimi-' + args);
+  var file = join(__dirname, 'kim-' + args);
   if(exists(file)) {
     return file;
   }

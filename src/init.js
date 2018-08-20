@@ -37,7 +37,7 @@ function init({demo, install}) {
     
     
 
-    console.log(`Creating a new kimi app in ${dest}`);
+    console.log(`Creating a new kim app in ${dest}`);
     console.log();
 
     vfs.src(['**/*', '!node_modules/**/*'], {cwd: cwd, cwdbase: true, dot: true})

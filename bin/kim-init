@@ -5,7 +5,7 @@ const program = require('commander');
 const chalk = require('chalk');
 
 
-console.log(chalk.gray('进入kimi-init页面了'));
+console.log(chalk.gray('进入kim-init页面了'));
 
 program
   .usage('<command> [options]')

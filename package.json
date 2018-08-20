@@ -5,7 +5,7 @@
   "description": "Quickly generate the project's front-end tools",
   "mail": "john_app@163.com",
   "bin": {
-    "kimi": "./bin/kim"
+    "kim": "./bin/kim"
   },
   "dependencies": {
     "chalk": "^2.4.1",    
